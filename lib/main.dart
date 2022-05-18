@@ -1,5 +1,6 @@
 import 'package:casey/enter_names_screen.dart';
 import 'package:casey/splash_screen.dart';
+import 'package:casey/voting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         homeScreenRoute: (context) => const HomeScreen(),
         votingMainScreenRoute: (context) => const VotingHomeScreen(),
         enterNamesScreenRoute: (context) => const EnterNameScreen(),
+        votingScreenRoute: (context) => const VotingScreen(),
         },
     );
   }
