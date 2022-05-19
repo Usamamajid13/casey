@@ -91,7 +91,9 @@ class _VotingHomeScreenState extends State<VotingHomeScreen> {
                 height: 20,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, seeResultsScreenRoute);
+                },
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   padding: const EdgeInsets.symmetric(vertical: 20),

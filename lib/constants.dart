@@ -13,3 +13,4 @@ const homeScreenRoute = "/homeScreenRoute";
 const votingMainScreenRoute = "/votingMainScreenRoute";
 const enterNamesScreenRoute = "/enterNamesScreenRoute";
 const votingScreenRoute = "/votingScreenRoute";
+const seeResultsScreenRoute = "/seeResultsScreenRoute";

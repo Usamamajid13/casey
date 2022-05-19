@@ -194,11 +194,14 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
                     {
                       final prefs = await SharedPreferences.getInstance();
                       List<String> allNames = [];
+                      List<String> allVotes = [];
                       for(int i = 0 ; i < controllers.length ;i++)
                       {
                         allNames.add( controllers[i].text);
+                        allVotes.add("0");
                       }
                       prefs.setStringList("names", allNames);
+                      prefs.setStringList("votes", allVotes);
                       Navigator.pop(context);
                     }
                 },

@@ -63,20 +63,25 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 40,
             ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.6,
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-              decoration: BoxDecoration(
-                  color: lightPinkColor,
-                  border: Border.all(color: Colors.black, width: 3)),
-              child: const Center(
-                child: Text(
-                  "MOST RECENT RESULTS",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 20),
-                  textAlign: TextAlign.center,
+            GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, seeResultsScreenRoute);
+              },
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.6,
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                decoration: BoxDecoration(
+                    color: lightPinkColor,
+                    border: Border.all(color: Colors.black, width: 3)),
+                child: const Center(
+                  child: Text(
+                    "MOST RECENT RESULTS",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
             ),

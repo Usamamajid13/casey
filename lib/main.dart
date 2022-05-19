@@ -1,4 +1,5 @@
 import 'package:casey/enter_names_screen.dart';
+import 'package:casey/results_screen.dart';
 import 'package:casey/splash_screen.dart';
 import 'package:casey/voting_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var mySystemTheme= SystemUiOverlayStyle.dark
-        .copyWith(systemNavigationBarColor: pinkColor,statusBarColor: pinkColor);
+    var mySystemTheme = SystemUiOverlayStyle.dark.copyWith(
+        systemNavigationBarColor: pinkColor, statusBarColor: pinkColor);
     SystemChrome.setSystemUIOverlayStyle(mySystemTheme);
     return MaterialApp(
       title: 'Casey Warriors',
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
         votingMainScreenRoute: (context) => const VotingHomeScreen(),
         enterNamesScreenRoute: (context) => const EnterNameScreen(),
         votingScreenRoute: (context) => const VotingScreen(),
-        },
+        seeResultsScreenRoute: (context) => const ResultScreen(),
+      },
     );
   }
 }
