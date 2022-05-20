@@ -227,7 +227,39 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
                   ),
                 ),
               ),
-            )
+            ),
+            Positioned(
+              top: 0,
+              left: 0,
+              child: GestureDetector(
+                onTap: () async {
+                      final prefs = await SharedPreferences.getInstance();
+                      prefs.remove("names");
+                      Navigator.pop(context);
+                },
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.only(top: 40, right: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black, width: 3),
+                    color: lightPinkColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      ("Clear Names").toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

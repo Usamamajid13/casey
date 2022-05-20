@@ -117,7 +117,7 @@ class _VotingHomeScreenState extends State<VotingHomeScreen> {
               GestureDetector(
                 onTap: () async {
                   SharedPreferences prefs = await SharedPreferences.getInstance();
-                  prefs.clear();
+                  prefs.remove("votes");
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
