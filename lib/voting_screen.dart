@@ -100,7 +100,7 @@ class _VotingScreenState extends State<VotingScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  votingDialog(index: i);
+                                  votingDialog(index: i,text: controllers[i].text);
                                 },
                                 child: Container(
                                   width:
@@ -196,7 +196,7 @@ class _VotingScreenState extends State<VotingScreen> {
     );
   }
 
-  votingDialog({index}) {
+  votingDialog({index,text}) {
     return showDialog(
       context: context,
       builder: (context) {
@@ -220,13 +220,26 @@ class _VotingScreenState extends State<VotingScreen> {
                         color: Colors.black,
                         width: 3,
                       )),
-                  child: const Center(
-                    child: Text(
-                      "SUBMIT",
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                      ),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+
+                        Text(
+                          "Voting $text",
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          "SUBMIT",
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
